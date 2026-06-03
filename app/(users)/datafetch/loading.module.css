@@ -1,0 +1,92 @@
+.loading-section {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #0f172a;
+}
+
+.hourglass-background {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hourglass-container {
+  position: relative;
+  width: 80px;
+  height: 120px;
+  animation: flip 2s infinite ease-in-out;
+}
+
+.hourglass-cap-top,
+.hourglass-cap-bottom {
+  width: 80px;
+  height: 10px;
+  background: #38bdf8;
+  border-radius: 5px;
+}
+
+.hourglass-glass-top,
+.hourglass-glass-bottom {
+  width: 80px;
+  height: 40px;
+  border: 2px solid #94a3b8;
+  border-radius: 50% / 20%;
+}
+
+.hourglass-sand {
+  position: absolute;
+  top: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 10px;
+  height: 40px;
+  background: #facc15;
+  animation: sandFlow 2s infinite linear;
+}
+
+.hourglass-sand-stream {
+  position: absolute;
+  top: 40px;
+  left: 50%;
+  width: 2px;
+  height: 40px;
+  background: #facc15;
+  animation: stream 1s infinite linear;
+}
+
+@keyframes flip {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(180deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes sandFlow {
+  0% {
+    height: 40px;
+    opacity: 1;
+  }
+  100% {
+    height: 0px;
+    opacity: 0;
+  }
+}
+
+@keyframes stream {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.3;
+  }
+  100% {
+    opacity: 1;
+  }
+}
