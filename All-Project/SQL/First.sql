@@ -1,0 +1,13 @@
+CREATE DATABASE college;
+-- CREATE DATABASE IF NOT EXISTS college;
+USE college;
+CREATE TABLE student(
+	id INT PRIMARY KEY,
+    name VARCHAR(50),
+    age INT NOT NULL
+);
+-- DROP DATABASE IF EXISTS newCollege;
+INSERT INTO student VALUES(1,"ajex",23);
+SELECT * FROM student;
+-- SHOW DATABASES;
+-- SHOW TABLES
