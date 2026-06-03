@@ -1,0 +1,11 @@
+services:
+  foodbill:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: smitkukadiyabvminfotech/playstore_frontend:foodbill
+    env_file:
+      - .env
+    expose:
+      - 3001
+    restart: always

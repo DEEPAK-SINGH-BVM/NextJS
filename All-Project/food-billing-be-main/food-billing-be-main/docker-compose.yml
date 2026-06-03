@@ -1,0 +1,11 @@
+version: '3.8'
+
+services:
+  foodbill:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    env_file:
+      - .env
+    ports:
+      - "127.0.0.1:3001:3001"
