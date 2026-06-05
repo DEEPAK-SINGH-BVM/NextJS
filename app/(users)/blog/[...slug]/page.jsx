@@ -4,6 +4,6 @@ const Blog = async (props) => {
   console.log("slug", slug);
 
   return <div>Blog</div>;
-};
+}; 
 
 export default Blog;

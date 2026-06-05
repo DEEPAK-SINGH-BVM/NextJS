@@ -17,7 +17,7 @@ const DataFetching = () => {
     try {
       const res = await fetch(`https://api.genderize.io/?name=${username}`);
       const data = await res.json();
-      console.log("responseData", data);
+      // console.log("responseData", data);
       setData(data);
     } catch (error) {
       console.error("error fetching data", error);

@@ -14,7 +14,7 @@ const DataCard = async ({userName}) => {
 //   try {
     const res = await fetch(`https://api.genderize.io/?name=${userName}`);
     const data = await res.json();
-    console.log("responseData", data);
+    // console.log("responseData", data);
       await new Promise((resolve) => {
         setTimeout(() => {
           resolve();

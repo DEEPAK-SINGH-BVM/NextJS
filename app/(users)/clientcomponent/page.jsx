@@ -10,7 +10,7 @@ const clientComponent = () => {
         "https://jsonplaceholder.typicode.com/posts",
       );
       const data = await response.json();
-      console.log("responseData", data);
+      // console.log("responseData", data);
       setData(data);
     } catch (error) {
       console.error("Error fetching data:", error);
