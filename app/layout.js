@@ -36,3 +36,21 @@ export default function RootLayout({ children }) {
 //     </html>
 //   )
 // }
+
+// /////////////////Extension 
+legacy Tabnine
+Auto close tag
+Auto rename tag
+Bracket Pair color DLW
+ES7 React/Redux/GraphQL/React-Native snippets
+Git Patch
+Image preview
+Import Cost
+indent-rainbow
+json
+Live Server
+Material Icon Theme
+Material-UI Snippets
+Prettier - Code formatter
+Prettify JSON
+Tailwind CSS IntelliSense
