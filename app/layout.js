@@ -1,9 +1,9 @@
 'use client';
 import { usePathname } from "next/navigation";
 import "./globals.css";
-import Navigation from "@/Components/Navigation";
+// import Navigation from "@/Components/Navigation";
 import { Roboto, Work_Sans } from "next/font/google";
-import { Toaster } from "@/components/ui/sonner"
+// import { Toaster } from "@/components/ui/sonner"
 const roboto = Roboto({
   subsets: ["latin"],
   variable: "--font-roboto",
@@ -20,7 +20,7 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body className={`${roboto.variable} ${workSans.variable}`}>
         {/* {pathname !== "/about" && <Navigation />} */}
-            <Toaster  richColors/>
+            {/* <Toaster  richColors/> */}
         {children}
       </body>
     </html>
@@ -38,6 +38,7 @@ export default function RootLayout({ children }) {
 // }
 
 // /////////////////Extension 
+/*
 legacy Tabnine
 Auto close tag
 Auto rename tag
@@ -54,3 +55,4 @@ Material-UI Snippets
 Prettier - Code formatter
 Prettify JSON
 Tailwind CSS IntelliSense
+ */
