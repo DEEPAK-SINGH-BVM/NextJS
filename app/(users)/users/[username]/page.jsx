@@ -1,3 +1,4 @@
+// for client component
 "use client";
 import { useParams } from "next/navigation";
 
@@ -9,7 +10,7 @@ const SingleUserPage = () => {
     <div>
       <h1>{username}</h1>
       <p>Username: {username}</p>
-      <p>Single User Page</p>
+      <p>Client side Single User Page</p>
     </div>
   );
 };

@@ -1,6 +1,7 @@
 "use client";
 import React, { useActionState, useState, useTransition } from "react";
 import contactAction from "./contact.action";
+//  useFormStatus is a Hook that gives you status information of the last form 
 import { useFormStatus } from "react-dom";
 
 // const contactAction = (formData) => {
@@ -29,6 +30,7 @@ export default function contactForm() {
       setProduct(res);
     });
   };
+  
   return (
     <div className="min-h-screen flex items-center justify-center bg-gray-950 px-4">
       <form
@@ -107,9 +109,9 @@ export default function contactForm() {
         <section>
           {product && (
             <p
-              className={`p-4 text-center mt-4 ${state.success ? "text-green-500 bg-green-900" : "text-red-500 bg-red-900"}`}
-            >
-              {state.message}
+              className={`p-4 text-center mt-4 ${product.success ? "text-green-500 bg-green-900" : "text-red-500 bg-red-900"}`}
+            > 
+              {product.message}
             </p>
           )}
         </section>
@@ -129,7 +131,7 @@ export default function contactForm() {
 
 const Submit = () => {
   const { pending, data, method, action } = useFormStatus();
-  // console.log("Form Status - Pending:", pending, "Data:", data, "Method:", method, "Action:", action);
+  console.log("Form Status - Pending:", pending, "Data:", data, "Method:", method, "Action:", action);
   return (
     <>
       <button

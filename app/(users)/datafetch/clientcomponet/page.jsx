@@ -9,10 +9,11 @@ const DataFetching = () => {
   console.log("username-client", username);
 
   const [data, setData] = useState(null);
-
+  console.log("data-client", data);
   if (!username) {
     return <p>Please enter a name</p>;
   }
+
   const fetchData = async () => {
     try {
       const res = await fetch(`https://api.genderize.io/?name=${username}`);
@@ -25,8 +26,11 @@ const DataFetching = () => {
   };
 
   useEffect(() => {
-    fetchData();
-  }, []);
+    if (username)
+    {
+      fetchData();
+    }
+  }, [username]);
 
   if (data?.error) {
     return (
@@ -38,15 +42,15 @@ const DataFetching = () => {
   }
   return (
     <div>
-      {/* {!username ? (
-        <p>Please enter a name</p>
-      ) : (
+      <>
+      {data && (
         <>
           <h1>Data Fetching </h1>
           Name : {data.name} <br /> Gender : {data.gender} <br /> Probability :{" "}
           {data.probability * 100}%
         </>
-      )} */}
+      )}
+      </>
       <h1>Data Fetching</h1>
       {username}
     </div>

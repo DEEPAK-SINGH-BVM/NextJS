@@ -1,28 +1,28 @@
-const DataCard = async ({userName}) => {
-//   const searchParams = await props.searchParams;
-//   const username = searchParams.name;
+const DataCard = async ({ userName }) => {
+  //   const searchParams = await props.searchParams;
+  //   const username = searchParams.name;
 
-//   await new Promise((resolve) => {
-//     setTimeout(() => {
-//       resolve();
-//     }, 3000);
-//   });
-//   if (!username) {
-//     return <p>Please enter a name</p>;
-//   }
-//   let data = null;
-//   try {
-    const res = await fetch(`https://api.genderize.io/?name=${userName}`);
-    const data = await res.json();
-    // console.log("responseData", data);
-      await new Promise((resolve) => {
-        setTimeout(() => {
-          resolve();
-        }, 3000);
-      });
-//   } catch (error) {
-//     console.error("error fetching data", error);
-//   }
+  //   await new Promise((resolve) => {
+  //     setTimeout(() => {
+  //       resolve();
+  //     }, 3000);
+  //   });
+  //   if (!username) {
+  //     return <p>Please enter a name</p>;
+  //   }
+  //   let data = null;
+  //   try {
+  const res = await fetch(`https://api.genderize.io/?name=${userName}`);
+  const data = await res.json();
+  console.log("responseData", data);
+  await new Promise((resolve) => {
+    setTimeout(() => {
+      resolve();
+    }, 3000);
+  });
+  //   } catch (error) {
+  //     console.error("error fetching data", error);
+  //   }
   if (data?.error) {
     return (
       <div>
@@ -36,12 +36,12 @@ const DataCard = async ({userName}) => {
       {/* {!username ? (
         <p>Please enter a name</p>
       ) : ( */}
-        <>
-          <h1>Data Fetching </h1>
-          Name : {data.name} <br /> Gender : {data.gender} <br /> Probability :{" "}
-          {data.probability * 100}%
-        </>
-    {/*    )} */}
+      <>
+        <h1>Data Fetching </h1>
+        Name : {data.name} <br /> Gender : {data.gender} <br /> Probability :{" "}
+        {data.probability * 100}%
+      </>
+      {/*    )} */}
     </div>
   );
 };

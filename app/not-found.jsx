@@ -22,6 +22,9 @@ const NotFound = () => {
       <button style={styles.button2}
       onClick={()=>router.back()}
       >Go Back</button>
+      {/* <button style={styles.button2}
+      onClick={()=>router.push("/")}
+      >Go Back</button> */}
     </div>
     </div>
   );

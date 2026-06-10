@@ -1,13 +1,21 @@
-"use client"
+"use client";
 
-import { toast } from "sonner"
+import { toast } from "sonner";
 
-import { Button } from "@/components/ui/button"
+import { Button } from "@/components/ui/button";
 
-export function SonnerTypes() {
+export default function page() {
   return (
     <div className="flex flex-wrap gap-2">
-      <Button variant="outline" onClick={() => toast("Event has been created")}>
+      <Button
+        variant="outline"
+        onClick={() =>
+          toast("Event has been created", {
+            description: "Monday, January 3rd at 6:00pm",
+          })
+        }
+        className="w-fit"
+      >
         Default
       </Button>
       <Button
@@ -41,21 +49,19 @@ export function SonnerTypes() {
       <Button
         variant="outline"
         onClick={() => {
-          toast.promise<{ name: string }>(
-            () =>
+          toast.promise(
               new Promise((resolve) =>
-                setTimeout(() => resolve({ name: "Event" }), 2000)
+                setTimeout(() => resolve({ name: "Event" }), 2000),
               ),
             {
               loading: "Loading...",
               success: (data) => `${data.name} has been created`,
               error: "Error",
-            }
-          )
+            });
         }}
       >
         Promise
       </Button>
     </div>
-  )
+  );
 }

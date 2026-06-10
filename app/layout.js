@@ -3,7 +3,7 @@ import { usePathname } from "next/navigation";
 import "./globals.css";
 import Navigation from "@/Components/Navigation";
 import { Roboto, Work_Sans } from "next/font/google";
-
+import { Toaster } from "@/components/ui/sonner"
 const roboto = Roboto({
   subsets: ["latin"],
   variable: "--font-roboto",
@@ -20,8 +20,19 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body className={`${roboto.variable} ${workSans.variable}`}>
         {/* {pathname !== "/about" && <Navigation />} */}
+            <Toaster  richColors/>
         {children}
       </body>
     </html>
   );
 }
+// export default function RootLayout ({children}){
+//   return (
+//     <html lang="en">
+//       <body>
+//         {/* <Navigation /> */}
+//         {children}
+//       </body>
+//     </html>
+//   )
+// }

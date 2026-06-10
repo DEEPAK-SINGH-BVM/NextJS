@@ -1,3 +1,4 @@
+// for server component
 const SingleUserPageId = async ({ params }) => {
   const { username, postId } = await params;
   console.log('username', username);
@@ -6,7 +7,7 @@ const SingleUserPageId = async ({ params }) => {
     <div>
       <h1>Name: {username}</h1>
       <p>Post Id: {postId}</p>
-      <p>Single User Page</p>
+      <p>Server side Single User Page</p>
     </div>
   );
 };
